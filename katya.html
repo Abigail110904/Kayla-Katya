@@ -1,0 +1,329 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Perfil de Katya</title>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #eee7ff, #fdfbff);
+            color: #333;
+            min-height: 100vh;
+        }
+
+        /* ENCABEZADO */
+        header {
+            background: linear-gradient(135deg, #6c4ccf, #8d6ee8);
+            color: white;
+            text-align: center;
+            padding: 55px 20px 90px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 17px;
+            opacity: 0.9;
+        }
+
+        /* CONTENEDOR */
+        .contenedor {
+            width: 90%;
+            max-width: 900px;
+            margin: -55px auto 40px;
+            position: relative;
+        }
+
+        /* TARJETA PRINCIPAL */
+        .perfil {
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(70, 40, 130, 0.15);
+        }
+
+        /* AVATAR */
+        .avatar {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .avatar img {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid white;
+            box-shadow: 0 8px 25px rgba(108, 76, 207, 0.35);
+        }
+
+        .avatar h2 {
+            margin-top: 18px;
+            font-size: 30px;
+            color: #333;
+        }
+
+        .avatar p {
+            margin-top: 7px;
+            color: #777;
+            font-size: 16px;
+        }
+
+        /* TARJETAS DE INFORMACIÓN */
+        .informacion {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .seccion {
+            background: #faf8ff;
+            padding: 28px;
+            border-radius: 18px;
+            border: 1px solid #eee8ff;
+            transition: 0.3s;
+        }
+
+        .seccion:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(108, 76, 207, 0.12);
+        }
+
+        .titulo-seccion {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #6c4ccf;
+            margin-bottom: 20px;
+        }
+
+        .titulo-seccion i {
+            font-size: 25px;
+        }
+
+        .titulo-seccion h3 {
+            font-size: 20px;
+        }
+
+        .seccion ul {
+            list-style: none;
+        }
+
+        .seccion li {
+            padding: 12px 0;
+            border-bottom: 1px solid #e7e2f5;
+            color: #555;
+        }
+
+        .seccion li:last-child {
+            border-bottom: none;
+        }
+
+        .seccion li i {
+            color: #6c4ccf;
+            margin-right: 8px;
+        }
+
+        /* FRASE */
+        .frase {
+            text-align: center;
+            margin: 35px 0 10px;
+            padding: 22px;
+            background: linear-gradient(135deg, #f4efff, #faf8ff);
+            border-radius: 18px;
+            color: #6c4ccf;
+            font-style: italic;
+        }
+
+        .frase i {
+            font-size: 25px;
+            margin-right: 8px;
+        }
+
+        /* BOTÓN */
+        .regresar {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .regresar a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #6c4ccf;
+            color: white;
+            text-decoration: none;
+            padding: 13px 25px;
+            border-radius: 12px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .regresar a:hover {
+            background: #5435ad;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(108, 76, 207, 0.3);
+        }
+
+        /* PIE */
+        footer {
+            text-align: center;
+            color: #888;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        /* CELULAR */
+        @media (max-width: 700px) {
+
+            header {
+                padding: 40px 20px 80px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .contenedor {
+                width: 94%;
+                margin-top: -45px;
+            }
+
+            .perfil {
+                padding: 25px 18px;
+            }
+
+            .informacion {
+                grid-template-columns: 1fr;
+            }
+
+            .avatar img {
+                width: 140px;
+                height: 140px;
+            }
+
+            .avatar h2 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>Mi Perfil</h1>
+        <p>Conoce un poco sobre mí ✨</p>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="contenedor">
+
+        <section class="perfil">
+
+            <!-- AVATAR -->
+            <div class="avatar">
+
+                <img 
+                    src="https://images.unsplash.com/photo-1527061011665-3652c757a4d4?w=500"
+                    alt="Flores de colores">
+
+                <h2>Katya Abigail Soto</h2>
+                <p>Estudiante de Ingeniería en Sistemas 💻</p>
+
+            </div>
+
+            <!-- INFORMACIÓN -->
+            <div class="informacion">
+
+                <!-- INTERESES -->
+                <div class="seccion">
+
+                    <div class="titulo-seccion">
+                        <i class="bi bi-code-slash"></i>
+                        <h3>Intereses profesionales</h3>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Desarrollo de Aplicaciones web
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Trabajar y aprender con bases de datos
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!-- PASATIEMPOS -->
+                <div class="seccion">
+
+                    <div class="titulo-seccion">
+                        <i class="bi bi-heart-fill"></i>
+                        <h3>Pasatiempos</h3>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <i class="bi bi-music-note-beamed"></i>
+                            Escuchar música
+                        </li>
+
+                        <li>
+                            <i class="bi bi-film"></i>
+                            Hacer ejercicio
+                        </li>
+
+                        <li>
+                            <i class="bi bi-controller"></i>
+                            Salir a correr
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- REGRESAR -->
+            <div class="regresar">
+                <a href="index.html">
+                    <i class="bi bi-arrow-left"></i>
+                    Regresar al inicio
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- PIE -->
+    <footer>
+        © 2026 - Perfil de Katya 💜
+    </footer>
+
+</body>
+</html>
+```
